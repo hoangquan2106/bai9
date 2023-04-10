@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <h1>kiểm tra số ngày trong tháng</h1>
+    <input type="number" min="1" max="12" id="aaa" placeholder="nhập tháng" style="width: 15%">
+    <button onclick="ccc()">check</button>
+    <br>
+    <p id="bbb">hiển thị kết quả</p>
+</form>
+</body>
+</html>
+<script>
+    function ccc() {
+        let dd = parseInt(document.getElementById("aaa").value )
+        switch (dd) {
+            case 1:
+            case 3:
+            case 4:
+            case 6:
+            case 8:
+            case 10:
+            case 11:
+                bbb = document.write("tháng này có 30 ngày")
+                break;
+            case 2:
+                bbb = document.write("tháng này có 28 hoặc 29 ngày")
+                break;
+            case 5:
+            case 7:
+            case 9:
+            case 12:
+                bbb = document.write("tháng này có 31 ngày")
+                break;
+            default:
+                "không có tháng này"
+        }
+    }
+</script>
