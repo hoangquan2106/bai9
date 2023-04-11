@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>tính chỉ số cân nặng</h1>
+nhập cân nặng (kg): <input id="c" type="number">
+<br>
+nhập chiều cao (m): <input id="d" type="number">
+<br>
+<button onclick="aaaa()">kiểm tra</button>
+<p id="bbbb"></p>
+</body>
+</html>
+<script>
+function aaaa() {
+  let a = d / ( c ^ 2 );
+  if (a < 18) {
+    document.getElementById("bbbb").innerHTML = "thiếu cân";
+  }
+  else if (18.5 >= a <25.0) {
+    document.getElementById("bbbb").innerHTML = "bình thường";
+  }
+  else if (25.0 >= a < 30) {
+    document.getElementById("bbbb").innerHTML = "thừa cân";
+  }
+  else {
+    document.getElementById("bbbb").innerHTML = "béo phì";
+  }
+}
+</script>
