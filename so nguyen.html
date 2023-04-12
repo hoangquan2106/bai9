@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    function td (num) {
+        let a = 0;
+        let b = 0;
+        for (let i = 2; i < 100; i++) {
+            if (b < num) {
+                for (let j = 1; j <= i; j++) {
+                    if (i % j == 0) {
+                        a += 1;
+                    }
+                }
+                if (a == 2) {
+                    document.write(i + "<br>");
+                    b+= 1;
+                }
+                a = 0;
+            } else {
+                break;
+            }
+        }
+    }
+    let nums = parseInt(prompt("Nhập n"));
+    td (nums);
+
+</script>
